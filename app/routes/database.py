@@ -7,7 +7,7 @@ from flask import (
 from sqlalchemy import create_engine
 
 # Configurações do banco de dados
-DATABASE_USER = 'app'
+DATABASE_USER = 'app'#
 DATABASE_PASSWORD = '123mudar!'
 DATABASE_HOST = '127.0.0.1'  # ou o IP do servidor
 DATABASE_PORT = '3306'  # Porta padrão do MySQL
