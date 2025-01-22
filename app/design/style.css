@@ -1,0 +1,156 @@
+:root {
+    --height-top: 100px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    width: 100svw;
+    height: 100svh;
+}
+
+div.app {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+div.app > header,
+div.app > main {
+    width: 100%;
+}
+
+div.app > header {
+    background-color: #000;
+    height: var(--height-top);
+    display: flex;
+}
+
+div.app > main {
+    background-color: #181818;
+    height: calc(100% - var(--height-top));
+}
+
+div.app > header > div.conteudo,
+div.app > main > div.conteudo {
+    max-width: 1366px;
+    margin: 0 auto;
+    width:100%;
+}
+
+div.app > header > div.conteudo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+div.app > main > div.conteudo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+div.app > header > div.conteudo img[alt="logo"] {
+    height: 100%;
+    padding: 1rem;
+}
+
+div.app > header > div.conteudo a {
+    margin: auto 0;
+    padding: 1rem;
+    background-color: #fff;
+    margin-right: 1rem;
+}
+
+h1.title-home {
+    margin: 0 auto;
+    color: #fff;
+    padding-top: 1rem;
+    font-size: 2rem;
+}
+
+div.form-home {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 3rem;
+    /* border: solid 1px #fff; */
+}
+
+div.form-home > button {
+    all: unset;
+    border: solid 1px #fff;
+    color: #fff;
+    padding: 1.5rem 3.5rem;
+    margin-top: 3rem;
+    font-size: 1.5rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: .2s;
+}
+
+.button-focus:hover {
+    border: solid 1px #fff;
+    background-color: rgba(255,255,255,.2);
+    /* color: #000; */
+}
+
+div.carregando {
+    border: dotted 10px #fff;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-top: 5rem;
+    animation: spin 3s linear infinite;
+}
+
+div.conteudo > h1.title-registros {
+    color: #fff;
+    padding: 1rem;
+}
+
+div.conteudo > div.lista-opcoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 1rem;
+}
+
+div.conteudo > div.lista-opcoes > button {
+    flex: 1 1 calc(33.33% - 16px); /* Define a largura para 1/3 do contêiner menos o espaçamento */
+    max-width: calc(33.33% - 16px); /* Garante que não ultrapasse 1/3 */
+    box-sizing: border-box; /* Inclui padding e border na largura total */
+
+    /* all: unset; */
+    color: #fff;
+    padding: 1.5rem 3.5rem;
+    margin-top: 3rem;
+    font-size: 1.5rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: .2s;
+    background-color: transparent;
+}
+
+div.conteudo > div.lista-opcoes > button:hover {
+    border: solid 1px #fff;
+    background-color: rgba(255,255,255,.2);
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
